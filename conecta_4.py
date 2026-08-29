@@ -2,7 +2,7 @@ import numpy as np
 import tkinter as tk 
                     
 conecta_4 = tk.Tk()
-conecta_4.title("calculadora")
+conecta_4.title("conecta_4")
 conecta_4.geometry("400x350")
 
 
@@ -15,16 +15,22 @@ fuente = ("Arial",15)
 display = tk.Label(
     conecta_4,
     font= fuente,
-    text= estructura_vacia 
+    text= estructura_vacia,
+    bg="#8be6e9"
+    
 )
 
-display.pack()
+display.pack(
+    fill="both"
+)
 marco_botones_numeros = tk.Frame(
     conecta_4,
+    bg="#8be6e9"
 )
 marco_botones_numeros.pack(
-    anchor=tk.S,
-    expand=False,
+    anchor=tk.CENTER,
+    expand=False
+
 )
 
 
@@ -133,7 +139,10 @@ boton_end = tk.Button(
             command = end
         )
 
-boton_end.pack()  
+boton_end.pack(
+    expand=True,
+    fill="both"
+)  
 
   
 def juego(tablero):
